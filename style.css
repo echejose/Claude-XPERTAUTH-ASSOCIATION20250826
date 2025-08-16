@@ -1,4 +1,779 @@
-html {
-  height: 100%;
+/* Estilos generales */
+body {
+  background: linear-gradient(to bottom, #e6f0ff, #cce0f5);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Grid de servicios */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+
+.tarjeta-servicio {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
   width: 100%;
+  max-width: 300px;
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-servicio:hover img {
+  transform: scale(1.03);
+}
+
+.tarjeta-servicio .contenido {
+  padding: 1rem;
+  text-align: center;
+}
+
+.tarjeta-servicio h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #007BFF;
+}
+
+/* Grid de Herramientas de IA */
+.grid-herramientas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-herramientas img {
+  max-width: 100px;
+  height: auto;
+}
+
+.grid-herramientas p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Adaptabilidad */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-herramientas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-herramientas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Ajustes mínimos de home (no rompen nada existente) === */
+
+/* 1) Títulos centrados en las secciones */
+section h2 {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+/* 2) Párrafos centrados en la página, con ancho cómodo y justificados */
+section p {
+  max-width: 800px;      /* igual que en subpáginas */
+  margin: 0.5rem auto;   /* centra el bloque en la página */
+  text-align: justify;   /* justifica el texto */
+}
+
+/* 3) Hero: imagen más contenida y centrada */
+#inicio > img {
+  width: 100%;
+  max-height: 380px;     /* reduce altura del hero */
+  object-fit: cover;     /* recorte elegante sin deformar */
+  display: block;
+  border-radius: 8px;
+}
+
+/* 4) Quiénes somos: imagen centrada y tamaño moderado */
+#Quienes-somos img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
+
+/* 5) CTA del hero centrado (sin afectar a las tarjetas de servicios) */
+#inicio a[href*="contacto"] {
+  display: inline-block;
+  margin: 1rem auto 0;
+}
+
+/* 6) Herramientas de IA: ocultar nombres, dejar solo logos */
+.grid-herramientas p,
+.grid-herramientas span {
+  display: none;
+}
+/* 1) CTA del header centrado y atractivo */
+header .cta {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+header .cta:hover {
+  background-color: #e65500;
+}
+header {
+  text-align: center; /* Asegura que el CTA quede centrado */
+}
+
+/* 2) Lista de "Quiénes somos" alineada con el texto */
+#Quienes-somos ul {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  padding-left: 1.2rem;
+}
+#Quienes-somos li {
+  margin-bottom: 0.5rem;
+}
+
+/* 3) Ocultar nombres bajo los logos de Herramientas de IA */
+.grid-herramientas p,
+.grid-herramientas span {
+  display: none;
+}
+/* Centrar y estilizar el CTA del header */
+header {
+  text-align: center; /* Centra todo el contenido del header */
+}
+header .cta {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+header .cta:hover {
+  background-color: #e65500;
+}
+
+/* Espaciado entre secciones */
+section {
+  margin-bottom: 3rem; /* añade separación vertical */
+}
+/* Espaciado uniforme entre secciones */
+.section {
+  margin-bottom: 60px; /* Espacio inferior de cada sección */
+}
+
+.section:last-of-type {
+  margin-bottom: 0; /* Sin espacio extra en la última sección */
+}
+.btn-cta {
+  background-color: #ff6600; /* Naranja */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e65c00;
+}
+/* Estamentos oficiales */
+.grid-estamentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid-estamentos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-estamentos img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease;
+}
+
+.grid-estamentos img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-estamentos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-estamentos {
+    grid-template-columns: 1fr;
+  }
+}
+/* === Estamentos oficiales === */
+.grid-estamentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid-estamentos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-estamentos img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease;
+}
+
+.grid-estamentos img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-estamentos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-estamentos {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== Footer ===== */
+.footer {
+  background-color: #007BFF;
+  color: white;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+  margin: 0.3rem 0;
+}
+
+.footer-info .slogan {
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.btn-footer {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-footer:hover {
+  background-color: darkorange;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+}
+/* === Teaser Blog === */
+.blog-teaser { max-width: 1000px; margin: 0 auto; }
+.blog-teaser-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  padding: 1.25rem 1.5rem;
+}
+.blog-teaser-text h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+.blog-teaser .blog-meta { color:#666; font-size:.9rem; margin:.1rem 0 .7rem; }
+.blog-teaser .blog-excerpt { margin: 0 0 1rem; text-align: justify; }
+
+/* Footer quick link */
+.footer-quick { margin-top: .5rem; }
+.footer-quick a { color:#fff; text-decoration:none; }
+.footer-quick a:hover { text-decoration:underline; }
+.boton-blog {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.boton-blog:hover {
+  background-color: #0056b3;
+}
+/* Blog Section */
+.blog-section {
+  background: linear-gradient(to bottom, #e6f0ff, #cce0f5);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.blog-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.blog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-buttons a {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.btn-cta:hover {
+  background-color: #e65c00;
+}
+
+.btn-secondary {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+/* Fondo consistente para sección blog */
+section.blog-section {
+  background: linear-gradient(to bottom, #e6f0ff, #cce0f5);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* Botones CTA blog */
+.blog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  background-color: #FF6A00;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e85d00;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono del blog en el footer */
+.footer-social a.blog-icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.footer-social a.blog-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.footer {
+  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.footer-slogan {
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-social a {
+  margin: 0 0.4rem;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.footer-legal {
+  margin-top: 1rem;
+}
+
+.footer-legal a {
+  color: #007BFF;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+.footer-contact p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.footer-contact a {
+  color: #007BFF;
+  text-decoration: none;
+}
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+/* Sección del blog */
+.blog-teaser {
+  background-color: #e6f0ff; /* Mismo fondo que el resto */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.blog-teaser-card {
+  background: #ffffff; /* Se puede dejar blanco o usar #f9fbfd si quieres un blanco más suave */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-teaser-text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-teaser-text p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.blog-teaser .btn-cta {
+  margin: 0.5rem;
+}
+/* Sección de blog */
+.blog {
+  background-color: #e6f0ff;
+  padding: 4rem 2rem;
+}
+
+.blog-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.blog-excerpt {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  color: #333;
+}
+
+.blog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.blog-buttons .btn-cta {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.blog-buttons .btn-cta:hover {
+  background-color: #e55a00;
+}
+/* Footer limpio y centrado */
+.footer {
+  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer .btn-cta {
+  display: inline-block;
+  margin: 1rem 0;
+  background-color: #ff6600;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.footer .btn-cta:hover {
+  background-color: #e55a00;
+}
+
+.footer-social {
+  margin: 1rem 0;
+}
+
+.footer-social a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.footer-social img:hover {
+  filter: grayscale(0%);
+}
+
+.footer-legal {
+  margin-top: 1rem;
+  color: #007bff;
+}
+
+.footer-legal a {
+  text-decoration: none;
+  color: #007bff;
+  margin: 0 0.5rem;
+}
+
+.footer-contact {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.footer-contact a {
+  color: #007bff;
+  text-decoration: none;
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Herramientas de IA que utilizamos | XpertAuth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .grid-herramientas{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:2rem;
+      justify-items:center;
+      align-items:center;
+      max-width:1000px;
+      margin:2rem auto 0;
+      padding:1rem;
+    }
+    .herramienta{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:140px}
+    .herramienta img{max-width:100px;height:auto;margin-bottom:.5rem}
+    .herramienta span{font-size:.9rem;font-weight:500;color:#333}
+    @media (max-width:768px){.grid-herramientas{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>XpertAuth Association</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html#inicio">Inicio</a></li>
+        <li><a href="../../index.html#Quienes-somos">Quiénes somos</a></li>
+        <li><a href="../../index.html#servicios">Servicios</a></li>
+        <li><a href="herramientas.html">Herramientas de IA</a></li>
+        <li><a href="../../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding:2rem;max-width:1000px;margin:auto;">
+    <h2 style="text-align:center;">Herramientas de IA que utilizamos</h2>
+    <p style="text-align:center;max-width:800px;margin:1rem auto;">
+      Estas son las herramientas que usamos en XpertAuth para agilizar procesos, automatizar tareas y ofrecer servicios más inteligentes.
+    </p>
+
+    <div class="grid-herramientas">
+      <div class="herramienta"><img src="../../images/herramientas/logo-openai.png" alt="OpenAI"><span>OpenAI</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-n8n.png" alt="n8n"><span>n8n</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-supabase.png" alt="Supabase"><span>Supabase</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-zapier.png" alt="Zapier"><span>Zapier</span></div>
+
+      <div class="herramienta"><img src="../../images/herramientas/logo-google-ai-studio.png" alt="Google AI Studio"><span>Google AI Studio</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/gemini.png" alt="Gemini"><span>Gemini</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-claude.png" alt="Claude"><span>Claude</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-relevance.png" alt="Relevance"><span>Relevance</span></div>
+
+      <div class="herramienta"><img src="../../images/herramientas/logo-github.png" alt="GitHub"><span>GitHub</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-stripe.png" alt="Stripe"><span>Stripe</span></div>
+      <div class="herramienta"><img src="../../images/herramientas/logo-replit.png" alt="Replit"><span>Replit</span></div>
+      <!-- Si NO renombras el archivo, usa %20 en el espacio -->
+      <div class="herramienta"><img src='../../images/herramientas/logo-pickaxe%20(1).png' alt="Pickaxe"><span>Pickaxe</span></div>
+      <!-- Si lo renombras a logo-pickaxe.png, cambia la línea anterior por:
+      <div class="herramienta"><img src='../../images/herramientas/logo-pickaxe.png' alt="Pickaxe"><span>Pickaxe</span></div>
+      -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 XpertAuth Association</p>
+  </footer>
+</body>
+</html>

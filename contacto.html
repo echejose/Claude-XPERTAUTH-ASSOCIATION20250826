@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto | XpertAuth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>XpertAuth Association</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#Quienes-somos">Quiénes somos</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding: 2rem; max-width: 600px; margin: auto;">
+    <h2 style="text-align: center;">Formulario de contacto</h2>
+
+    <p style="text-align: center;">
+      Rellena este formulario para ponerte en contacto con nosotros. Te responderemos lo antes posible.
+    </p>
+
+    <form id="formulario-contacto" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+      <label>
+        Nombre completo:
+        <input type="text" name="nombre" required />
+      </label>
+
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Empresa (opcional):
+        <input type="text" name="empresa" />
+      </label>
+
+      <label>
+        Motivo del contacto:
+        <select name="motivo" required>
+          <option value="">Selecciona una opción</option>
+          <option value="socio">Quiero hacerme socio</option>
+          <option value="formacion">Me interesa la formación en IA</option>
+          <option value="consulta">Tengo una consulta general</option>
+        </select>
+      </label>
+
+      <label>
+        Mensaje:
+        <textarea name="mensaje" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" style="padding: 0.7rem; background-color: #007BFF; color: white; border: none; border-radius: 5px;">
+        📩 Enviar
+      </button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 XpertAuth Association</p>
+  </footer>
+</body>
+</html>
