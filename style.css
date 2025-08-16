@@ -16,10 +16,13 @@ header {
 
 /* Logo del header */
 .header-logo {
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
   background: transparent !important;
   margin-bottom: 0.5rem;
+  /* Forzar transparencia del fondo */
+  mix-blend-mode: multiply;
+  filter: contrast(1.1) brightness(1.1);
 }
 
 .header-content {
