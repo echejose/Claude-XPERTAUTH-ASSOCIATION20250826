@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,168 @@
   <title>Contacto | XpertAuth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contact-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: -2rem auto 0;
+      padding: 0 2rem 4rem;
+      position: relative;
+    }
+
+    .contact-form-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    input, select, textarea {
+      padding: 0.8rem 1rem;
+      border: 2px solid #e1e5e9;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+      background-color: white;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, #ff6600 0%, #e55a00 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .info-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .info-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      color: #007BFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .info-card a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .info-card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .contact-form-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid #c3e6cb;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,52 +183,144 @@
     </nav>
   </header>
 
-  <main style="padding: 2rem; max-width: 600px; margin: auto;">
-    <h2 style="text-align: center;">Formulario de contacto</h2>
+  <section class="contact-hero">
+    <h1>¡Hablemos!</h1>
+    <p>Estamos aquí para ayudarte con tus transportes especiales. Consulta gratuita y respuesta rápida garantizada.</p>
+  </section>
 
-    <p style="text-align: center;">
-      Rellena este formulario para ponerte en contacto con nosotros. Te responderemos lo antes posible.
-    </p>
+  <div class="contact-container">
+    <div class="contact-form-card">
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Formulario de contacto</h2>
+      
+      <div class="success-message" id="success-message">
+        ¡Gracias por tu mensaje! Te responderemos lo antes posible.
+      </div>
 
-    <form id="formulario-contacto" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
-      <label>
-        Nombre completo:
-        <input type="text" name="nombre" required />
-      </label>
+      <form id="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+          </div>
 
-      <label>
-        Correo electrónico:
-        <input type="email" name="email" required />
-      </label>
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+          </div>
 
-      <label>
-        Empresa (opcional):
-        <input type="text" name="empresa" />
-      </label>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+          </div>
 
-      <label>
-        Motivo del contacto:
-        <select name="motivo" required>
-          <option value="">Selecciona una opción</option>
-          <option value="socio">Quiero hacerme socio</option>
-          <option value="formacion">Me interesa la formación en IA</option>
-          <option value="consulta">Tengo una consulta general</option>
-        </select>
-      </label>
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+          </div>
 
-      <label>
-        Mensaje:
-        <textarea name="mensaje" rows="5" required></textarea>
-      </label>
+          <div class="form-group full-width">
+            <label for="motivo">Motivo del contacto *</label>
+            <select id="motivo" name="motivo" required>
+              <option value="">Selecciona una opción</option>
+              <option value="consulta-permisos">Consulta sobre permisos de transporte</option>
+              <option value="tramitacion">Tramitación de autorizaciones</option>
+              <option value="seguros">Seguros de responsabilidad civil</option>
+              <option value="formacion-ia">Formación en herramientas de IA</option>
+              <option value="socio">Quiero hacerme socio</option>
+              <option value="acompanamientos">Acompañamientos policiales</option>
+              <option value="vehiculos-piloto">Vehículos piloto</option>
+              <option value="otros">Otros servicios</option>
+            </select>
+          </div>
 
-      <button type="submit" style="padding: 0.7rem; background-color: #007BFF; color: white; border: none; border-radius: 5px;">
-        📩 Enviar
-      </button>
-    </form>
-  </main>
+          <div class="form-group full-width">
+            <label for="mensaje">Cuéntanos tu caso *</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Describe brevemente tu situación: tipo de transporte, dimensiones, recorrido, etc."></textarea>
+          </div>
+        </div>
 
-  <footer>
-    <p>© 2025 XpertAuth Association</p>
+        <button type="submit" class="submit-btn">
+          📨 Enviar consulta
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="icon">📞</div>
+        <h3>Teléfono</h3>
+        <p><a href="tel:+34666666666">+34 666 66 66 66</a></p>
+        <p>Horario: L-V 9:00-18:00</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">📧</div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@xpertauth.com">info@xpertauth.com</a></p>
+        <p>Respuesta en 24h máximo</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">📍</div>
+        <h3>Oficina</h3>
+        <p>Carrer de la Riera, 56<br>17130 L'Escala, Girona</p>
+        <p>Cita previa recomendada</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>XpertAuth Association</h3>
+        <p class="slogan">"Tú te ocupas de lo importante, clientes y flota, nosotros de la burocracia"</p>
+        <p>📍 Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
+        <p>📞 +34 666 66 66 66</p>
+        <p>📧 <a href="mailto:info@xpertauth.com">info@xpertauth.com</a></p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces legales</h4>
+        <ul>
+          <li><a href="legales/aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="legales/politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="legales/politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <a href="contacto.html" class="btn-footer">Contacto</a>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth">
+            <img src="images/social/linkedin.png" alt="LinkedIn" class="social-icon">
+          </a>
+          <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth">
+            <img src="images/social/blog-icon.png" alt="Blog" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 XpertAuth Association - Todos los derechos reservados</p>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simular envío exitoso
+      document.getElementById('success-message').style.display = 'block';
+      
+      // Limpiar formulario
+      this.reset();
+      
+      // Scroll al mensaje de éxito
+      document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+      
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        document.getElementById('success-message').style.display = 'none';
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
