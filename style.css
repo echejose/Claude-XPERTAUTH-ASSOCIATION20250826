@@ -15,8 +15,8 @@ header {
 
 /* Logo del header */
 .header-logo {
-  max-width: 200px;
-  height: 100px;
+  max-width: 120px;
+  height: 120px;
   background: transparent !important;
   margin-bottom: 0.5rem;
   /* Forzar transparencia del fondo */
