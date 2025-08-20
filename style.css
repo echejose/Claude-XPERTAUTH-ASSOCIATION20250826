@@ -15,8 +15,8 @@ header {
 
 /* Logo del header */
 .header-logo {
-  max-width: 120px;
-  height: 120px;
+  max-width: 100px;
+  height: 100px;
   background: transparent !important;
   margin-bottom: 0.5rem;
   /* Forzar transparencia del fondo */
@@ -623,7 +623,7 @@ section {
   color: #555;
 }
 .footer-contact a {
-  color: #007BFF;
+  color: white;
   text-decoration: none;
 }
 .footer-contact a:hover {
@@ -813,7 +813,238 @@ section {
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 1rem;
   color: white;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+}
+.cta-naranja {
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cta-naranja {
+  background-color: #f97316;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+.blog-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.blog-teaser-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+}
+
+.blog-teaser-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007BFF;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+
+.blog-excerpt {
+  font-size: 0.95rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.blog-teaser-card.placeholder {
+  background: #f4f4f4;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+.blog-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-card h3 {
+  min-height: 48px; /* ajusta según tamaño de fuente */
+}
+
+.blog-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+  min-height: 20px;
+}
+
+.blog-excerpt {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.blog-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+.blog-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem; /* para que haya espacio entre las tarjetas y el CTA */
+}
+
+.blog-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card-empty {
+  background-color: #f5f5f5;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-button {
+  background-color: #f47920;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.login-button {
+  background-color: #f47920;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #e26700;
+}
+/* Estilos para landing moderna */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0070f3;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.landing-header .logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+.btn-primary {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.landing-main {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+footer {
+  background-color: #4763a9;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
