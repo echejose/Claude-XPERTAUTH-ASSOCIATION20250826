@@ -22,6 +22,11 @@ header {
   object-fit: contain;
 }
 
+/* Asegurar que todas las imágenes mantengan fondos transparentes */
+img {
+  background: transparent !important;
+}
+
 .header-content {
   display: flex;
   flex-direction: row;
@@ -142,8 +147,6 @@ footer {
   max-width: 100px;
   height: auto;
   background: transparent !important;
-  mix-blend-mode: multiply;
-  filter: contrast(1.1) brightness(1.1);
 }
 
 .grid-herramientas p {
