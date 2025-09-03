@@ -1,95 +1,493 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Seguros de responsabilidad civil | XpertAuth</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../style.css" />
-  <style>
-    .logo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 2rem;
-      justify-items: center;
-      margin-top: 2rem;
-      padding: 1rem;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros Especializados en Transporte Especial | XpertAuth Association</title>
+    <meta name="description" content="Comparamos seguros de responsabilidad civil para transporte especial. Presupuestos personalizados de las mejores aseguradoras en Catalunya.">
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para la página de seguros */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
 
-    .logo-grid img {
-      max-width: 120px;
-      height: auto;
-      background: transparent !important;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: none;
-    }
+        .service-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            border-left: 5px solid #ff6600;
+        }
 
-    .seguros-texto {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-  </style>
+        .service-intro h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .service-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .grid-4x1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 1200px) {
+            .grid-4x1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-4x1 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6600, #ff8533);
+            transition: left 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #ff6600;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-icon {
+            font-size: 80px;
+            margin-bottom: 1.5rem;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Grid de aseguradoras 3x2 */
+        .aseguradoras-section {
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+        }
+
+        .aseguradoras-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .aseguradoras-title h3 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .aseguradoras-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .grid-aseguradoras {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .aseguradora-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .aseguradora-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 102, 0, 0.1), transparent);
+            transition: transform 0.3s ease;
+            transform: rotate(45deg) translate(-100%, -100%);
+        }
+
+        .aseguradora-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-color: #ff6600;
+        }
+
+        .aseguradora-card:hover::before {
+            transform: rotate(45deg) translate(0, 0);
+        }
+
+        .aseguradora-card img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            filter: grayscale(20%);
+        }
+
+        .aseguradora-card:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        .aseguradora-card h4 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .call-to-action h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .call-to-action p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        .btn-cta:hover {
+            background: #e55a00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-aseguradoras {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .aseguradora-card {
+                padding: 1.5rem;
+            }
+            
+            .aseguradora-card img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-aseguradoras {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <img src="../../images/logo-xpertauth-nuevo.png" alt="XpertAuth Association Logo" class="header-logo">
-      <div class="header-text">
-        <h1>XpertAuth Association</h1>
-        <nav>
-          <ul>
-            <li><a href="../../index.html#inicio">Inicio</a></li>
-            <li><a href="../../index.html#Quienes-somos">Quiénes somos</a></li>
-            <li><a href="../../index.html#servicios">Servicios</a></li>
-            <li><a href="../../index.html#contacto">Contacto</a></li>
-          </ul>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-bar container">
+            <img src="../../images/logo-xpertauth-nuevo.png" alt="XpertAuth Association - Especialistas en Transporte Especial" class="header-logo" />
+            <h1 class="site-title">XpertAuth Association</h1>
+        </div>
+        <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../../index.html#inicio">Inicio</a></li>
+                <li><a href="../../index.html#Quienes-somos">Quiénes somos</a></li>
+                <li><a href="../../index.html#servicios">Servicios</a></li>
+                <li><a href="../../index.html#herramientas">Herramientas IA</a></li>
+                <li><a href="../../index.html#blog">Blog</a></li>
+                <li><a href="../../contacto.html">Contacto</a></li>
+            </ul>
         </nav>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main style="padding: 2rem;">
-    <h2 style="text-align: center;">Seguros de responsabilidad civil</h2>
+    <!-- Hero Section -->
+    <section class="section hero">
+        <div class="container">
+            <img src="../../images/Servicios/seguros.jpg" alt="Seguros especializados para transporte especial - XpertAuth Association" class="hero-image">
+            
+            <div class="service-intro">
+                <h1>Seguros Especializados en Transporte Especial</h1>
+                <p>¿Necesitas un seguro de responsabilidad civil específico para tu transporte excepcional? ¿Quieres comparar coberturas y obtener el mejor precio del mercado? ¿Buscas una póliza que realmente cubra los riesgos específicos de tu operación?</p>
+                <p style="margin-top: 1rem; font-weight: 600;">En XpertAuth te ayudamos a encontrar el seguro perfecto para tu transporte especial. Solicitamos múltiples presupuestos personalizados y comparamos coberturas para ofrecerte la mejor opción en términos de precio y protección.</p>
+            </div>
+        </div>
+    </section>
 
-    <img src="../../images/Servicios/seguros.jpg" alt="Seguros para transporte especial" style="width: 100%; max-width: 800px; display: block; margin: 1.5rem auto; border-radius: 10px;" />
+    <!-- Servicios Grid 4x1 -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-4x1">
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Análisis de necesidades</h3>
+                    <p>Evaluamos tu operación, rutas y cargas para determinar exactamente qué coberturas necesitas según la normativa vigente</p>
+                </div>
 
-    <div class="seguros-texto">
-      <p>
-        En XpertAuth solicitamos varios <strong>presupuestos personalizados</strong> a compañías aseguradoras y comparamos sus coberturas para ofrecerte la opción que mejor se adapta a tu operación.
-      </p>
-      <p>
-        Nuestro objetivo es garantizar que cuentes con un seguro de responsabilidad civil adecuado, tanto en precio como en riesgos cubiertos, especialmente cuando la normativa exige una póliza adicional para realizar transportes especiales.
-      </p>
-    </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Comparación de presupuestos</h3>
+                    <p>Solicitamos ofertas personalizadas a múltiples aseguradoras y comparamos coberturas, exclusiones y precios</p>
+                </div>
 
-    <div class="logo-grid">
-      <img src="../images/Seguros/mapfre.png" alt="Mapfre" />
-      <img src="../images/Seguros/axa.png" alt="AXA" />
-      <img src="../images/Seguros/allianz.png" alt="Allianz" />
-      <img src="../images/Seguros/helvetia.png" alt="Helvetia" />
-      <img src="../images/Seguros/arag.png" alt="ARAG" />
-      <img src="../images/Seguros/liberty-seguros.png" alt="Liberty Seguros" />
-    </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Mejor relación precio-cobertura</h3>
+                    <p>Te presentamos la opción más competitiva que se ajuste a tu presupuesto sin comprometer la protección necesaria</p>
+                </div>
 
-    <div style="margin-top: 2rem; text-align: center;">
-      <p><strong>¿Necesitas ayuda para contratar un seguro adecuado a tu autorización?</strong></p>
-      <p>Rellena nuestro <a href="../../contacto.html">formulario de contacto</a> y te ayudaremos a comparar coberturas y precios.</p>
-    </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Gestión integral</h3>
+                    <p>Nos encargamos de toda la tramitación y te acompañamos durante el proceso hasta que tengas tu póliza activa</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div style="margin-top: 2rem; text-align: center;">
-      <a href="../../index.html#servicios" style="background-color: #007BFF; color: white; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none;">
-        ⬅️ Volver a servicios
-      </a>
-    </div>
-  </main>
+    <!-- Aseguradoras Partner -->
+    <section class="section">
+        <div class="container">
+            <div class="aseguradoras-section">
+                <div class="aseguradoras-title">
+                    <h3>Nuestras Aseguradoras Partner</h3>
+                    <p>Trabajamos con las principales compañías del mercado español especializadas en seguros de transporte. Cada una aporta fortalezas específicas para diferentes tipos de operaciones y riesgos.</p>
+                </div>
 
-  <footer style="background-color: #007BFF; color: white; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem;">
-    <p>© 2025 XpertAuth Association</p>
-  </footer>
+                <div class="grid-aseguradoras">
+                    <a href="https://www.mapfre.es" target="_blank" class="aseguradora-card" aria-label="Mapfre - Seguros de transporte">
+                        <img src="../images/Seguros/mapfre.png" alt="Mapfre Seguros">
+                        <h4>Mapfre</h4>
+                    </a>
+
+                    <a href="https://www.axa.es" target="_blank" class="aseguradora-card" aria-label="AXA - Seguros profesionales">
+                        <img src="../images/Seguros/axa.png" alt="AXA Seguros">
+                        <h4>AXA</h4>
+                    </a>
+
+                    <a href="https://www.allianz.es" target="_blank" class="aseguradora-card" aria-label="Allianz - Seguros comerciales">
+                        <img src="../images/Seguros/allianz.png" alt="Allianz Seguros">
+                        <h4>Allianz</h4>
+                    </a>
+
+                    <a href="https://www.helvetia.es" target="_blank" class="aseguradora-card" aria-label="Helvetia - Seguros especializados">
+                        <img src="../images/Seguros/helvetia.png" alt="Helvetia Seguros">
+                        <h4>Helvetia</h4>
+                    </a>
+
+                    <a href="https://www.arag.es" target="_blank" class="aseguradora-card" aria-label="ARAG - Seguros jurídicos">
+                        <img src="../images/Seguros/arag.png" alt="ARAG Seguros">
+                        <h4>ARAG</h4>
+                    </a>
+
+ <a href="https://libertyseguros.es" target="_blank" class="aseguradora-card" aria-label="Liberty Seguros - Seguros de empresa">                   
+                        <img src="../images/Seguros/liberty-seguros.png" alt="Liberty Seguros">
+                        <h4>Liberty Seguros</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Por qué elegir nuestro servicio? -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-4x1">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Especialización sectorial</h3>
+                    <p>Conocemos los riesgos específicos del transporte especial y las coberturas realmente necesarias</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Proceso ágil</h3>
+                    <p>Respuesta rápida con múltiples presupuestos para que puedas tomar una decisión informada</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Asesoramiento experto</h3>
+                    <p>Te explicamos cada cobertura en términos claros para que entiendas exactamente qué contratas</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🆓</div>
+                    <h3>Sin coste adicional</h3>
+                    <p>Nuestro servicio de comparación es gratuito - solo pagas el precio de la póliza que elijas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container">
+            <div class="call-to-action">
+                <h3>¿Necesitas un seguro para tu transporte especial?</h3>
+                <p>Déjanos buscar la mejor opción para ti. Comparamos coberturas y precios para ofrecerte la póliza más competitiva del mercado.</p>
+                <a href="../../contacto.html" class="btn-cta">Solicitar Presupuestos Gratuitos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer exacto del index.html -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>XpertAuth Association</h3>
+                <p class="slogan">"Tú te ocupas de lo importante, clientes y flota, nosotros de la burocracia"</p>
+                
+                <div style="margin: 1rem 0;">
+                    <p style="margin: 0.5rem 0;"><strong>📍 Oficina en L'Escala (Girona)</strong></p>
+                    <p style="margin: 0.3rem 0; color: #666;">Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
+                    <p style="margin: 0.3rem 0;"><strong>📞 Teléfono:</strong> <a href="tel:+34666666666" style="color: #ff6600;">+34 666 66 66 66</a></p>
+                    <p style="margin: 0.3rem 0;"><strong>📧 Email:</strong> <a href="mailto:info@xpertauth.com" style="color: #ff6600;">info@xpertauth.com</a></p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.9rem; color: #333;">
+                    <strong>🕒 Horario de Atención:</strong><br>
+                    Lunes a Viernes: 9:00 - 14:00<br>
+                    <span style="color: #28a745;">✅ Consultoría inicial siempre gratuita</span>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li><a href="../../legales/aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="../../legales/politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="../../legales/politica-cookies.html">Política de Cookies</a></li>
+                </ul>
+                
+                <h4 style="margin-top: 2rem;">Servicios Principales</h4>
+                <ul>
+                    <li><a href="consultoria.html">Consultoría Gratuita</a></li>
+                    <li><a href="permisos.html">Tramitación Permisos</a></li>
+                    <li><a href="formacion.html">Formación IA</a></li>
+                    <li><a href="acompanamientos.html">Acompañamientos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <a href="../../contacto.html" class="btn-footer" style="background: #ff6600; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; display: inline-block; margin-bottom: 1rem; font-weight: bold;">
+                    💬 Contactar Ahora
+                </a>
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth - Red profesional transporte especial">
+                        <img src="../../images/social/linkedin.png" alt="LinkedIn XpertAuth" class="social-icon">
+                    </a>
+                    <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth - Noticias transporte especial">
+                        <img src="../../images/social/blog-icon.png" alt="Blog XpertAuth" class="social-icon">
+                    </a>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">
+                        🚀 ¿Listo para simplificar tus trámites?
+                    </p>
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem;">
+                        Consultoría gratuita • Sin compromiso
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 XpertAuth Association — Especialistas en Transporte Especial Catalunya</p>
+            <p><em>Proyecto en desarrollo activo. Asociación sin ánimo de lucro en proceso de constitución legal.</em></p>
+        </div>
+    </footer>
 </body>
 </html>
-

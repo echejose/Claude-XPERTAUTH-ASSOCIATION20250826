@@ -2,64 +2,530 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Tramitación de permisos | XpertAuth</title>
+  <title>Gestión de Permisos de Transporte Especial | XpertAuth Association</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../../style.css" />
+  <style>
+    /* Efectos hover para todas las cards */
+    .hover-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .hover-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Efectos específicos para organismos */
+    .organismo-card:hover {
+      transform: translateY(-8px) scale(1.05);
+    }
+    
+    /* Grid responsivo mejorado */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <img src="../../images/logo-xpertauth-nuevo.png" alt="XpertAuth Association Logo" class="header-logo">
-      <div class="header-text">
-        <h1>XpertAuth Association</h1>
-        <nav>
-          <ul>
-            <li><a href="../../index.html#inicio">Inicio</a></li>
-            <li><a href="../../index.html#Quienes-somos">Quiénes somos</a></li>
-            <li><a href="../../index.html#servicios">Servicios</a></li>
-            <li><a href="../../index.html#contacto">Contacto</a></li>
-          </ul>
-        </nav>
+ 
+   <header class="site-header">
+  <div class="header-bar container">
+    <img src="/images/logo-xpertauth-nuevo.png" alt="XpertAuth Association" class="header-logo" />
+    <h1 class="site-title">XpertAuth Association</h1>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/index.html#inicio">Inicio</a></li>
+      <li><a href="/index.html#Quienes-somos">Quiénes somos</a></li>
+      <li><a href="/index.html#servicios">Servicios</a></li>
+      <li><a href="/index.html#herramientas">Herramientas IA</a></li>
+      <li><a href="/index.html#blog">Blog</a></li>
+      <li><a href="/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main style="padding: 2rem; max-width: 1200px; margin: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- Título principal -->
+    <h1 style="text-align: center; color: #2c3e50; margin-bottom: 2rem; font-size: 2.5rem; font-weight: 700;">
+      Gestión Completa de Permisos de Transporte Especial
+    </h1>
+    
+    <!-- Imagen principal -->
+    <img src="../../images/Servicios/permisos.jpg" alt="Gestión completa de permisos de transporte especial - XpertAuth Association" style="width: 100%; max-width: 1000px; display: block; margin: 2rem auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);" />
+    
+    <!-- Introducción -->
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; border-radius: 15px; margin: 2rem 0; border-left: 5px solid #007BFF;">
+      <p style="font-size: 1.2rem; line-height: 1.8; margin: 0 0 1rem 0; color: #2c3e50;">
+        ¿Necesitas autorización para transportar cargas excepcionales? ¿Tu mercancía supera las dimensiones o pesos estándar? 
+        ¿Quieres evitar multas y problemas legales en carretera?
+      </p>
+      <p style="font-size: 1.1rem; line-height: 1.7; margin: 0; color: #495057;">
+        En XpertAuth nos encargamos de la gestión integral de todos los permisos y autorizaciones necesarias para que tus transportes especiales 
+        circulen completamente legales por España. Tramitamos ante DGT, SCT, y organismos autonómicos con la máxima agilidad y precisión.
+      </p>
+    </div>
+
+    <!-- Tipos de permisos que gestionamos -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2rem; font-size: 2rem; text-align: center;">
+        Permisos y autorizaciones que tramitamos
+      </h2>
+      
+      <div class="grid-4" style="margin: 2rem 0;">
+        
+        <!-- Permisos por dimensiones -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #007BFF; text-align: center;">
+          <div style="background: #007BFF; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            📏
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Permisos por dimensiones</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Autorizaciones para cargas que superan 2,55m de ancho, 4m de alto o 16,5m de largo
+          </p>
+        </div>
+
+        <!-- Permisos por peso -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #28a745; text-align: center;">
+          <div style="background: #28a745; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            ⚖️
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Permisos por peso</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Tramitación para transportes que exceden las 40 toneladas de MMA autorizada
+          </p>
+        </div>
+
+        <!-- Transportes indivisibles -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #ffc107; text-align: center;">
+          <div style="background: #ffc107; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🏗️
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Transportes indivisibles</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Maquinaria industrial, prefabricados, elementos estructurales y cargas indivisibles
+          </p>
+        </div>
+
+        <!-- Permisos especiales -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #dc3545; text-align: center;">
+          <div style="background: #dc3545; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚛
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Autorizaciones especiales</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Mercancías peligrosas, transportes nocturnes y rutas específicas
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Organismos competentes -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2rem; font-size: 2rem; text-align: center;">
+        Organismos ante los que tramitamos
+      </h2>
+      
+      <div class="grid-4" style="margin: 2rem 0;">
+        
+        <!-- DGT -->
+        <div class="hover-card organismo-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <img src="../../images/logos/dgt.png" alt="DGT - Dirección General de Tráfico" style="width: 100px; height: auto; margin: 0 auto 1rem; display: block;" />
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">DGT</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            Dirección General de Tráfico<br>
+            <strong>Carreteras estatales y autonómicas</strong>
+          </p>
+        </div>
+
+        <!-- SCT Catalunya -->
+        <div class="hover-card organismo-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <img src="../../images/logos/sct.png" alt="SCT - Servei Català de Trànsit" style="width: 100px; height: auto; margin: 0 auto 1rem; display: block;" />
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">SCT Catalunya</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            Servei Català de Trànsit<br>
+            <strong>Red viaria catalana</strong>
+          </p>
+        </div>
+
+        <!-- Gobierno Vasco -->
+        <div class="hover-card organismo-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <img src="../../images/logos/gv-trafico.png" alt="Gobierno Vasco - Tráfico" style="width: 100px; height: auto; margin: 0 auto 1rem; display: block;" />
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Gobierno Vasco</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            Autoridades vascas<br>
+            <strong>País Vasco y coordinación</strong>
+          </p>
+        </div>
+
+        <!-- Policía Foral -->
+        <div class="hover-card organismo-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <img src="../../images/logos/policia-foral.png" alt="Policía Foral - Diputación Foral de Navarra" style="width: 100px; height: auto; margin: 0 auto 1rem; display: block;" />
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Diputación Foral</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            Policía Foral Navarra<br>
+            <strong>Otros organismos autonómicos</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Qué incluye nuestro servicio -->
+    <section style="background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%); color: white; padding: 3rem; border-radius: 15px; margin: 3rem 0;">
+      <h2 style="text-align: center; margin-bottom: 2.5rem; font-size: 2rem;">
+        ¿Qué incluye nuestro servicio integral?
+      </h2>
+      
+      <div class="grid-4">
+        
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            📋
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Análisis técnico completo</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Evaluamos dimensiones, pesos y características específicas de tu carga
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🛣️
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Planificación de rutas</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Itinerarios optimizados según restricciones y normativa vigente
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            📄
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Tramitación completa</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Presentación de solicitudes, seguimiento y gestión de tasas
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            💰
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Transparencia en costes</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Presupuesto detallado con todas las tasas y gestiones incluidas
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2.5rem; font-size: 2rem; text-align: center;">
+        ¿Por qué confiar en XpertAuth para tus permisos?
+      </h2>
+      
+      <div class="grid-4">
+        
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #28a745; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #28a745; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            ✅
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Experiencia probada
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Décadas de experiencia como Jefe de Tráfico garantizan tramitaciones sin errores ni rechazos
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #007BFF; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #007BFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            ⚡
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Tecnología avanzada
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            IA y automatización para reducir tiempos de tramitación y aumentar la precisión
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #dc3545; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #dc3545; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            📞
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Seguimiento activo
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Control constante del estado de tu expediente con actualizaciones en tiempo real
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #ffc107; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #ffc107; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            💼
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Servicio integral
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Desde el análisis inicial hasta la entrega del permiso, nos ocupamos de todo
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; text-align: center; padding: 3rem 2rem; border-radius: 15px; margin: 3rem 0;">
+      <h2 style="margin-bottom: 1rem; font-size: 2rem;">
+        ¿Necesitas tramitar un permiso de transporte especial?
+      </h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+        Confía tu expediente a profesionales con experiencia probada
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <a href="../../contacto.html" style="background: white; color: #28a745; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+          📞 Solicitar presupuesto
+        </a>
+        <a href="../../index.html#servicios" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem;">
+          ⬅️ Ver otros servicios
+        </a>
       </div>
     </div>
-  </header>
 
-  <main style="padding: 2rem; max-width: 900px; margin: auto;">
-    <h2 style="text-align: center;">Tramitación de permisos</h2>
-
-    <img src="../../images/Servicios/permisos.jpg" alt="Gestión de permisos de circulación" style="width: 100%; max-width: 800px; display: block; margin: 1.5rem auto; border-radius: 10px;" />
-
-    <p>
-      En XpertAuth nos encargamos de la <strong>gestión integral de los permisos especiales de circulación</strong> necesarios para que tus transportes cumplan la normativa y circulen sin problemas por las carreteras españolas.
-    </p>
-
-    <p>
-      Estamos especializados en permisos para cargas que superan las dimensiones y pesos estándar, tramitando solicitudes ante el <strong>Servei Català de Trànsit (TransiT)</strong>, <strong>la DGT</strong> y el <strong>Gobierno Vasco</strong>, según el recorrido de tu transporte.
-    </p>
-
-    <p>
-      Nuestro equipo analiza cada caso y presenta la solicitud adecuada, con seguimiento activo del expediente y gestión de tasas si corresponde. También coordinamos los <strong>acompañamientos obligatorios</strong> y los <strong>vehículos piloto</strong> si son necesarios.
-    </p>
-
-    <p>
-      Gracias a nuestra experiencia y uso de herramientas digitales, aceleramos los tiempos y reducimos errores. Si eres socio, puedes beneficiarte de <strong>precios reducidos</strong> y un canal directo de atención personalizada.
-    </p>
-
-    <p style="margin-top: 2rem;">
-  <strong>¿Quieres que gestionemos tu próximo permiso?</strong><br/>
-  Rellena nuestro <a href="../../contacto.html">formulario de contacto</a> y analizaremos tu caso sin compromiso.
-</p>
-
-    <div style="margin-top: 2rem; text-align: center;">
-      <a href="../../index.html#servicios" style="background-color: #007BFF; color: white; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none;">
-        ⬅️ Volver a servicios
-      </a>
-    </div>
   </main>
 
-  <footer style="background-color: #007BFF; color: white; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem;">
-    <p>© 2025 XpertAuth Association</p>
+  <!-- Footer actualizado -->
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer - Gestión de Permisos | XpertAuth Association</title>
+    <style>
+        /* Footer actualizado consistente con el patrón establecido */
+        footer {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            padding: 4rem 0 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #63b3ed;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #63b3ed;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info i {
+            margin-right: 0.75rem;
+            color: #63b3ed;
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #63b3ed;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* FontAwesome para iconos */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+    </style>
+</head>
+<body>
+
+<!-- Footer actualizado para consistencia -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>XpertAuth Association</h3>
+      <p class="slogan">"Tú te ocupas de lo importante, clientes y flota, nosotros de la burocracia"</p>
+      
+      <!-- INFORMACIÓN DE CONTACTO OPTIMIZADA -->
+      <div style="margin: 1rem 0;">
+        <p style="margin: 0.5rem 0;"><strong>📍 Oficina en L'Escala (Girona)</strong></p>
+        <p style="margin: 0.3rem 0; color: #666;">Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
+        <p style="margin: 0.3rem 0;"><strong>📞 Teléfono:</strong> <a href="tel:+34666666666" style="color: #ff6600;">+34 666 66 66 66</a></p>
+        <p style="margin: 0.3rem 0;"><strong>📧 Email:</strong> <a href="mailto:info@xpertauth.com" style="color: #ff6600;">info@xpertauth.com</a></p>
+      </div>
+      
+      <!-- HORARIOS -->
+      <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.9rem; color: #333;">
+        <strong>🕒 Horario de Atención:</strong><br>
+        Lunes a Viernes: 9:00 - 14:00<br>
+        <span style="color: #28a745;">✅ Consultoría inicial siempre gratuita</span>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Información Legal</h4>
+      <ul>
+        <li><a href="../../legales/aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="../../legales/politica-privacidad.html">Política de Privacidad</a></li>
+        <li><a href="../../legales/politica-cookies.html">Política de Cookies</a></li>
+      </ul>
+      
+      <!-- SERVICIOS RÁPIDOS -->
+      <h4 style="margin-top: 2rem;">Servicios Principales</h4>
+      <ul>
+        <li><a href="consultoria.html">Consultoría Gratuita</a></li>
+        <li><a href="permisos.html">Tramitación Permisos</a></li>
+        <li><a href="formacion.html">Formación IA</a></li>
+        <li><a href="acompanamientos.html">Acompañamientos</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <a href="../../contacto.html" class="btn-footer" style="background: #ff6600; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; display: inline-block; margin-bottom: 1rem; font-weight: bold;">
+        💬 Contactar Ahora
+      </a>
+      
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth - Red profesional transporte especial">
+          <img src="../../images/social/linkedin.png" alt="LinkedIn XpertAuth" class="social-icon">
+        </a>
+        <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth - Noticias transporte especial">
+          <img src="../../images/social/blog-icon.png" alt="Blog XpertAuth" class="social-icon">
+        </a>
+      </div>
+      
+      <!-- CALL TO ACTION FINAL -->
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+        <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">
+          🚀 ¿Listo para simplificar tus trámites?
+        </p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem;">
+          Consultoría gratuita • Sin compromiso
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 XpertAuth Association — Especialistas en Transporte Especial Catalunya</p>
+    <p><em>Proyecto en desarrollo activo. Asociación sin ánimo de lucro en proceso de constitución legal.</em></p>
+  </div>
+</footer>
+      <!-- Línea separadora -->
+      <div style="height: 1px; background: rgba(255,255,255,0.2); margin: 2rem 0;"></div>
+
+      <!-- Copyright -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+        <p style="margin: 0; opacity: 0.8; font-size: 0.9rem;">
+          © 2025 XpertAuth Association - Todos los derechos reservados
+        </p>
+        <p style="margin: 0; opacity: 0.7; font-size: 0.85rem;">
+          Asociación sin ánimo de lucro | Transporte especial | Catalunya
+        </p>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>

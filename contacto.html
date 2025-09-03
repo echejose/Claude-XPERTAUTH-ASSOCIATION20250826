@@ -1,203 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Contacto | XpertAuth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .contact-hero {
-      background-color: #007BFF;
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .contact-hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .contact-hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-container {
-      max-width: 1000px;
-      margin: -2rem auto 0;
-      padding: 0 2rem 4rem;
-      position: relative;
-    }
-
-    .contact-form-card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-group.full-width {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    input, select, textarea {
-      padding: 0.8rem 1rem;
-      border: 2px solid #e1e5e9;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background-color: #f8f9fa;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: #007BFF;
-      background-color: white;
-      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .submit-btn {
-      background: linear-gradient(135deg, #ff6600 0%, #e55a00 100%);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
-    }
-
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .info-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
-
-    .info-card .icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .info-card h3 {
-      color: #007BFF;
-      margin-bottom: 0.5rem;
-    }
-
-    .info-card p {
-      color: #666;
-      line-height: 1.6;
-    }
-
-    .info-card a {
-      color: #007BFF;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .info-card a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .contact-hero h1 {
-        font-size: 2rem;
-      }
-      
-      .contact-form-card {
-        padding: 2rem 1.5rem;
-      }
-    }
-
-    .success-message {
-      background: #d4edda;
-      color: #155724;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      border: 1px solid #c3e6cb;
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <div class="header-content">
-      <img src="images/logo-xpertauth-nuevo.png" alt="XpertAuth Association Logo" class="header-logo">
-      <div class="header-text">
-        <h1>XpertAuth Association</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html#inicio">Inicio</a></li>
-            <li><a href="index.html#Quienes-somos">Quiénes somos</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+<body class="page-contact">
+  <!-- Header unificado -->
+  <header class="site-header">
+    <div class="header-bar container">
+      <img src="/images/logo-xpertauth-nuevo.png" alt="XpertAuth Association" class="header-logo" />
+      <h1 class="site-title">XpertAuth Association</h1>
     </div>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/index.html#inicio">Inicio</a></li>
+        <li><a href="/index.html#Quienes-somos">Quiénes somos</a></li>
+        <li><a href="/index.html#servicios">Servicios</a></li>
+        <li><a href="/index.html#herramientas">Herramientas IA</a></li>
+        <li><a href="/index.html#blog">Blog</a></li>
+        <li><a href="/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- Hero contacto (coherente con el sitio) -->
   <section class="contact-hero">
     <h1>¡Hablemos!</h1>
-    <p>Estamos aquí para ayudarte con tus transportes especiales. Consulta gratuita y respuesta rápida garantizada.</p>
+    <p>Estamos aquí para ayudarte con tus transportes especiales. Consulta gratuita y respuesta rápida.</p>
   </section>
 
   <div class="contact-container">
+    <!-- Formulario -->
     <div class="contact-form-card">
-      <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Formulario de contacto</h2>
-      
-      <div class="success-message" id="success-message">
+      <h2 style="text-align:center; margin-bottom:1rem; color:#333;">Formulario de contacto</h2>
+
+      <div class="success-message" id="success-message" role="status" aria-live="polite">
         ¡Gracias por tu mensaje! Te responderemos lo antes posible.
       </div>
 
@@ -244,18 +86,17 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-btn">
-          📨 Enviar consulta
-        </button>
+        <button type="submit" class="submit-btn">📨 Enviar consulta</button>
       </form>
     </div>
 
+    <!-- Tarjetas de contacto (más pequeñas) -->
     <div class="contact-info">
       <div class="info-card">
         <div class="icon">📞</div>
         <h3>Teléfono</h3>
         <p><a href="tel:+34666666666">+34 666 66 66 66</a></p>
-        <p>Horario: L-V 9:00-18:00</p>
+        <p>Horario: L–V 9:00–14:00</p>
       </div>
 
       <div class="info-card">
@@ -274,58 +115,284 @@
     </div>
   </div>
 
+  <!-- Footer - OPTIMIZADO -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-info">
         <h3>XpertAuth Association</h3>
         <p class="slogan">"Tú te ocupas de lo importante, clientes y flota, nosotros de la burocracia"</p>
-        <p>📍 Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
-        <p>📞 +34 666 66 66 66</p>
-        <p>📧 <a href="mailto:info@xpertauth.com">info@xpertauth.com</a></p>
+        
+        <!-- INFORMACIÓN DE CONTACTO OPTIMIZADA -->
+        <div style="margin: 1rem 0;">
+          <p style="margin: 0.5rem 0;"><strong>📍 Oficina en L'Escala (Girona)</strong></p>
+          <p style="margin: 0.3rem 0; color: #666;">Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
+          <p style="margin: 0.3rem 0;"><strong>📞 Teléfono:</strong> <a href="tel:+34666666666" style="color: #ff6600;">+34 666 66 66 66</a></p>
+          <p style="margin: 0.3rem 0;"><strong>📧 Email:</strong> <a href="mailto:info@xpertauth.com" style="color: #ff6600;">info@xpertauth.com</a></p>
+        </div>
+        
+        <!-- HORARIOS -->
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.9rem; color: #333;">
+          <strong>🕒 Horario de Atención:</strong><br>
+          Lunes a Viernes: 9:00 - 14:00<br>
+          <span style="color: #28a745;">✅ Consultoría inicial siempre gratuita</span>
+        </div>
       </div>
+      
       <div class="footer-links">
-        <h4>Enlaces legales</h4>
+        <h4>Información Legal</h4>
         <ul>
           <li><a href="legales/aviso-legal.html">Aviso Legal</a></li>
           <li><a href="legales/politica-privacidad.html">Política de Privacidad</a></li>
           <li><a href="legales/politica-cookies.html">Política de Cookies</a></li>
         </ul>
+        
+        <!-- SERVICIOS RÁPIDOS -->
+        <h4 style="margin-top: 2rem;">Servicios Principales</h4>
+        <ul>
+          <li><a href="pages/servicios/consultoria.html">Consultoría Gratuita</a></li>
+          <li><a href="pages/servicios/permisos.html">Tramitación Permisos</a></li>
+          <li><a href="pages/servicios/formacion.html">Formación IA</a></li>
+          <li><a href="pages/servicios/acompanamientos.html">Acompañamientos</a></li>
+        </ul>
       </div>
+      
       <div class="footer-contact">
-        <a href="contacto.html" class="btn-footer">Contacto</a>
+        <a href="contacto.html" class="btn-footer" style="background: #ff6600; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; display: inline-block; margin-bottom: 1rem; font-weight: bold;">
+          💬 Contactar Ahora
+        </a>
+        
         <div class="social-icons">
-          <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth">
-            <img src="images/social/linkedin.png" alt="LinkedIn" class="social-icon">
+          <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth - Red profesional transporte especial">
+            <img src="images/social/linkedin.png" alt="LinkedIn XpertAuth" class="social-icon">
           </a>
-          <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth">
-            <img src="images/social/blog-icon.png" alt="Blog" class="social-icon">
+          <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth - Noticias transporte especial">
+            <img src="images/social/blog-icon.png" alt="Blog XpertAuth" class="social-icon">
           </a>
+        </div>
+        
+        <!-- CALL TO ACTION FINAL -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+          <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">
+            🚀 ¿Listo para simplificar tus trámites?
+          </p>
+          <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem;">
+            Consultoría gratuita • Sin compromiso
+          </p>
         </div>
       </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>© 2025 XpertAuth Association - Todos los derechos reservados</p>
+      <p>© 2025 XpertAuth Association — Especialistas en Transporte Especial Catalunya</p>
+      <p><em>Proyecto en desarrollo activo. Asociación sin ánimo de lucro en proceso de constitución legal.</em></p>
     </div>
   </footer>
 
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #f9fbfd; color: #333; padding: 1rem; border-top: 1px solid #ccc; text-align: center; z-index: 9999; display: none; box-shadow: 0 -2px 10px rgba(0,0,0,0.1);">
+    🍪 Utilizamos cookies para mejorar tu experiencia de navegación. Al continuar, aceptas nuestra 
+    <a href="legales/politica-cookies.html" target="_blank" style="color: #ff6600; text-decoration: underline;">Política de Cookies</a>.
+    <button id="accept-cookies" style="margin-left: 1rem; background-color: #ff6600; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: bold;">
+      ✅ Aceptar Cookies
+    </button>
+  </div>
+
+  <!-- JSON-LD Schema adicional para servicios -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "XpertAuth Association",
+    "description": "Especialistas en tramitación de permisos y autorizaciones para transporte especial en Catalunya",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de la Riera, 56",
+      "addressLocality": "L'Escala",
+      "addressRegion": "Girona",
+      "postalCode": "17130",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "42.1247",
+      "longitude": "3.1336"
+    },
+    "telephone": "+34 666 66 66 66",
+    "email": "info@xpertauth.com",
+    "url": "https://xpertauth.com",
+    "openingHours": "Mo-Fr 09:00-14:00",
+    "priceRange": "€€",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.1247",
+        "longitude": "3.1336"
+      },
+      "geoRadius": "500000"
+    },
+    "serviceType": [
+      "Transporte Especial",
+      "Permisos DGT",
+      "Gestorías",
+      "Consultoría IA"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Transporte Especial",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Consultoría Gratuita",
+            "description": "Asesoramiento gratuito sobre permisos de transporte especial"
+          },
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tramitación de Permisos",
+            "description": "Gestión completa de permisos ante DGT y SCT"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Formación en IA",
+            "description": "Formación especializada en inteligencia artificial aplicada al transporte"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+    // Banner de cookies mejorado
+    window.addEventListener('load', function () {
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const accepted = localStorage.getItem('cookiesAccepted');
       
-      // Simular envío exitoso
-      document.getElementById('success-message').style.display = 'block';
+      if (!accepted) {
+        setTimeout(() => {
+          banner.style.display = 'block';
+          banner.style.animation = 'slideUp 0.5s ease-out';
+        }, 2000); // Mostrar después de 2 segundos
+      }
       
-      // Limpiar formulario
-      this.reset();
-      
-      // Scroll al mensaje de éxito
-      document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
-      
-      // Ocultar mensaje después de 5 segundos
-      setTimeout(() => {
-        document.getElementById('success-message').style.display = 'none';
-      }, 5000);
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.style.animation = 'slideDown 0.5s ease-in';
+        setTimeout(() => {
+          banner.style.display = 'none';
+        }, 500);
+      });
     });
   </script>
+
+  <style>
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    @keyframes slideDown {
+      from { transform: translateY(0); }
+      to { transform: translateY(100%); }
+    }
+    
+    /* Mejoras CSS adicionales para herramientas */
+    .herramienta-item {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .herramienta-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .herramienta-item img {
+      max-width: 80px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    
+    .herramienta-item p {
+      font-size: 0.8rem;
+      color: #666;
+      margin: 0;
+    }
+    
+    /* Mejoras para estamentos */
+    .estamento-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 0.5rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .estamento-logo:hover .estamento-info {
+      transform: translateY(0);
+    }
+    
+    .estamento-info h4 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .estamento-info p {
+      margin: 0;
+      font-size: 0.7rem;
+      opacity: 0.8;
+    }
+  </style>
+
+  <!-- Supabase (puedes moverlo a script.js cuando quieras) -->
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+
+    const supabaseUrl = "https://gpanqnyxmzpbnlixcttw.supabase.co"
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdwYW5xbnl4bXpwYm5saXhjdHR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5ODY0NjAsImV4cCI6MjA2OTU2MjQ2MH0.wYQFfLuKlSY94eHES691SF7jrMHVfRFGrXsq2-CFbAk"
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    window.signUp = async function () {
+      const email = prompt("Introduce tu correo electrónico para registrarte")
+      if (!email) return
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: { shouldCreateUser: true, emailRedirectTo: window.location.origin + "/main.html" }
+      })
+      if (error) alert("Error al registrarte: " + error.message)
+      else alert("📩 Te hemos enviado un correo para completar el registro.")
+    }
+
+    window.login = async function () {
+      const email = prompt("Introduce tu correo electrónico para iniciar sesión")
+      if (!email) return
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: { shouldCreateUser: false, emailRedirectTo: window.location.origin + "/main.html" }
+      })
+      if (error) alert("Error al iniciar sesión: " + error.message)
+      else alert("📩 Revisa tu correo para iniciar sesión.")
+    }
+  </script>
+
+<script type="module" src="/script.js"></script>
+
 </body>
 </html>

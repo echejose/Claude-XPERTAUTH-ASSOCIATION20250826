@@ -2,70 +2,583 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Vehículos piloto | XpertAuth</title>
+  <title>Coordinación de Vehículos Piloto | XpertAuth Association</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../../style.css" />
+  <style>
+    /* Efectos hover para todas las cards */
+    .hover-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .hover-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Efectos específicos para tipos de vehículos */
+    .vehiculo-card:hover {
+      transform: translateY(-8px) scale(1.05);
+    }
+    
+    /* Grid responsivo mejorado */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <img src="../../images/logo-xpertauth-nuevo.png" alt="XpertAuth Association Logo" class="header-logo">
-      <div class="header-text">
-        <h1>XpertAuth Association</h1>
-        <nav>
-          <ul>
-            <li><a href="../../index.html#inicio">Inicio</a></li>
-            <li><a href="../../index.html#Quienes-somos">Quiénes somos</a></li>
-            <li><a href="../../index.html#servicios">Servicios</a></li>
-            <li><a href="../../contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
+ 
+  <header class="site-header">
+  <div class="header-bar container">
+    <img src="/images/logo-xpertauth-nuevo.png" alt="XpertAuth Association" class="header-logo" />
+    <h1 class="site-title">XpertAuth Association</h1>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/index.html#inicio">Inicio</a></li>
+      <li><a href="/index.html#Quienes-somos">Quiénes somos</a></li>
+      <li><a href="/index.html#servicios">Servicios</a></li>
+      <li><a href="/index.html#herramientas">Herramientas IA</a></li>
+      <li><a href="/index.html#blog">Blog</a></li>
+      <li><a href="/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main style="padding: 2rem; max-width: 1200px; margin: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- Título principal -->
+    <h1 style="text-align: center; color: #2c3e50; margin-bottom: 2rem; font-size: 2.5rem; font-weight: 700;">
+      Coordinación Profesional de Vehículos Piloto
+    </h1>
+    
+    <!-- Imagen principal -->
+    <img src="../../images/Servicios/piloto.jpg" alt="Coordinación profesional de vehículos piloto para transportes especiales - XpertAuth Association" style="width: 100%; max-width: 1000px; display: block; margin: 2rem auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);" />
+    
+    <!-- Introducción -->
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; border-radius: 15px; margin: 2rem 0; border-left: 5px solid #007BFF;">
+      <p style="font-size: 1.2rem; line-height: 1.8; margin: 0 0 1rem 0; color: #2c3e50;">
+        ¿Tu transporte especial supera las dimensiones estándar? ¿Necesitas vehículos de apertura o cierre para circular legalmente? 
+        ¿Quieres garantizar la máxima seguridad durante el trayecto?
+      </p>
+      <p style="font-size: 1.1rem; line-height: 1.7; margin: 0; color: #495057;">
+        En XpertAuth coordinamos profesionalmente todos los vehículos piloto necesarios para tu transporte especial. 
+        Trabajamos con conductores certificados, vehículos homologados y equipamiento reglamentario para garantizar el cumplimiento 
+        total de la normativa vigente.
+      </p>
+    </div>
+
+    <!-- Tipos de vehículos piloto -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2rem; font-size: 2rem; text-align: center;">
+        Tipos de vehículos piloto que coordinamos
+      </h2>
+      
+      <div class="grid-4" style="margin: 2rem 0;">
+        
+        <!-- Vehículo piloto delantero -->
+        <div class="hover-card vehiculo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #007BFF; text-align: center;">
+          <div style="background: #007BFF; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚗
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Vehículo Delantero</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Apertura de ruta, señalización anticipada y coordinación del tráfico en sentido contrario
+          </p>
+        </div>
+
+        <!-- Vehículo piloto trasero -->
+        <div class="hover-card vehiculo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #28a745; text-align: center;">
+          <div style="background: #28a745; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚙
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Vehículo Trasero</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Protección posterior, señalización de cierre y control de vehículos que se aproximan
+          </p>
+        </div>
+
+        <!-- Doble cobertura -->
+        <div class="hover-card vehiculo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #ffc107; text-align: center;">
+          <div style="background: #ffc107; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚗🚙
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Doble Cobertura</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Coordinación completa con vehículos delantero y trasero para máxima seguridad
+          </p>
+        </div>
+
+        <!-- Vehículos especializados -->
+        <div class="hover-card vehiculo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-top: 4px solid #dc3545; text-align: center;">
+          <div style="background: #dc3545; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚛
+          </div>
+          <h3 style="margin: 0 0 1rem 0; color: #2c3e50; font-size: 1.3rem;">Vehículos Especializados</h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0;">
+            Equipos especiales para transportes de dimensiones extremas o cargas peligrosas
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cuándo son obligatorios -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2rem; font-size: 2rem; text-align: center;">
+        ¿Cuándo son obligatorios los vehículos piloto?
+      </h2>
+      
+      <div class="grid-4" style="margin: 2rem 0;">
+        
+        <!-- Por anchura -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <div style="width: 80px; height: 80px; background: #007BFF; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; line-height: 1;">
+            <div style="font-size: 1.8rem; font-weight: bold;">↔</div>
+            <div style="font-size: 0.9rem; font-weight: bold; margin-top: 2px;">3.00m</div>
+          </div>
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Por anchura</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            <strong>Más de 3,00m</strong><br>
+            Vehículo piloto obligatorio
+          </p>
+        </div>
+
+        <!-- Por longitud -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <div style="width: 80px; height: 80px; background: #28a745; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; line-height: 1;">
+            <div style="font-size: 1.8rem; font-weight: bold;">↕</div>
+            <div style="font-size: 0.8rem; font-weight: bold; margin-top: 2px;">20.55m</div>
+          </div>
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Por longitud</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            <strong>Más de 20,55m</strong><br>
+            Coordinación especializada
+          </p>
+        </div>
+
+        <!-- Por peso -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <div style="width: 80px; height: 80px; background: #ffc107; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; line-height: 1;">
+            <div style="font-size: 1.8rem; font-weight: bold;">⚖</div>
+            <div style="font-size: 0.9rem; font-weight: bold; margin-top: 2px;">45T</div>
+          </div>
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Por peso</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            <strong>Más de 45 toneladas</strong><br>
+            Según tipo de vía y ruta
+          </p>
+        </div>
+
+        <!-- Criterios especiales -->
+        <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+          <div style="width: 80px; height: 80px; background: #dc3545; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; line-height: 1;">
+            <div style="font-size: 1.8rem; font-weight: bold;">⚠</div>
+            <div style="font-size: 0.8rem; font-weight: bold; margin-top: 2px;">ZONA</div>
+          </div>
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.2rem;">Criterios especiales</h3>
+          <p style="color: #6c757d; margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            <strong>Zonas urbanas</strong><br>
+            Horarios restringidos
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Qué incluye nuestro servicio -->
+    <section style="background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%); color: white; padding: 3rem; border-radius: 15px; margin: 3rem 0;">
+      <h2 style="text-align: center; margin-bottom: 2.5rem; font-size: 2rem;">
+        ¿Qué incluye nuestro servicio de coordinación?
+      </h2>
+      
+      <div class="grid-4">
+        
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🔍
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Análisis de requisitos</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Evaluamos dimensiones, ruta y normativa para determinar vehículos necesarios
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            👥
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Conductores certificados</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Red de profesionales homologados con experiencia en transportes especiales
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            🚗
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Vehículos homologados</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Flota con equipamiento reglamentario y señalización oficial
+          </p>
+        </div>
+
+        <div class="hover-card" style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+          <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">
+            📱
+          </div>
+          <h3 style="margin-bottom: 0.8rem; font-size: 1.3rem;">Coordinación en tiempo real</h3>
+          <p style="opacity: 0.9; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Comunicación constante durante todo el trayecto para máxima seguridad
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section style="margin: 3rem 0;">
+      <h2 style="color: #2c3e50; margin-bottom: 2.5rem; font-size: 2rem; text-align: center;">
+        ¿Por qué confiar en XpertAuth para tus vehículos piloto?
+      </h2>
+      
+      <div class="grid-4">
+        
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #28a745; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #28a745; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            ✅
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Red profesional establecida
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Años de colaboración con los mejores conductores de vehículos piloto de Catalunya
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #007BFF; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #007BFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            ⚡
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Disponibilidad inmediata
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Coordinación rápida incluso para servicios urgentes o de última hora
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #dc3545; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #dc3545; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            📋
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Cumplimiento normativo
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Garantizamos que todos los vehículos cumplen la legislación vigente
+          </p>
+        </div>
+
+        <div class="hover-card" style="background: #f8f9fa; padding: 2.5rem 2rem; border-radius: 12px; border-left: 5px solid #ffc107; text-align: center;">
+          <div style="width: 70px; height: 70px; background: #ffc107; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
+            💰
+          </div>
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">
+            Precios competitivos
+          </h3>
+          <p style="color: #6c757d; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+            Tarifas transparentes y ajustadas según distancia, horarios y complejidad
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; text-align: center; padding: 3rem 2rem; border-radius: 15px; margin: 3rem 0;">
+      <h2 style="margin-bottom: 1rem; font-size: 2rem;">
+        ¿Necesitas vehículos piloto para tu transporte especial?
+      </h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+        Coordinamos profesionales certificados con disponibilidad inmediata
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <a href="../../contacto.html" style="background: white; color: #28a745; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+          📞 Solicitar coordinación
+        </a>
+        <a href="../../index.html#servicios" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem;">
+          ⬅️ Ver otros servicios
+        </a>
       </div>
     </div>
-  </header>
 
-  <main style="padding: 2rem; max-width: 900px; margin: auto;">
-    <h2 style="text-align: center;">Coordinación de vehículos piloto</h2>
-
-    <img src="../../images/Servicios/piloto.jpg" alt="Vehículos piloto para transportes especiales" style="width: 100%; max-width: 800px; display: block; margin: 1.5rem auto; border-radius: 10px;" />
-
-    <p>
-      En muchos transportes especiales, especialmente aquellos que superan determinadas longitudes o anchos, es obligatorio el uso de <strong>vehículos piloto</strong> para señalizar, proteger y abrir paso al convoy.
-    </p>
-
-    <p>
-      Desde XpertAuth te ayudamos a <strong>localizar y coordinar</strong> los vehículos piloto necesarios, ya sea para apertura, cierre o doble cobertura. Trabajamos con profesionales certificados y vehículos totalmente equipados.
-    </p>
-
-    <p>
-      Además, te asesoramos sobre:
-    </p>
-
-    <ul>
-      <li>🚨 Cuándo es obligatorio usar piloto</li>
-      <li>🛻 Qué tipo de vehículo necesitas según dimensiones y zona</li>
-      <li>📝 Documentación que deben llevar los conductores</li>
-    </ul>
-
-    <p>
-      Este servicio está disponible tanto para transportistas puntuales como para empresas con operaciones frecuentes.
-    </p>
-
-    <div style="margin-top: 2rem; text-align: center;">
-      <p><strong>¿Necesitas un vehículo piloto para tu próxima ruta?</strong></p>
-      <p>Solicítalo desde nuestro <a href="../../contacto.html">formulario de contacto</a> y te ayudaremos a gestionarlo rápidamente.</p>
-    </div>
-
-    <div style="margin-top: 2rem; text-align: center;">
-      <a href="../../index.html#servicios" style="background-color: #007BFF; color: white; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none;">
-        ⬅️ Volver a servicios
-      </a>
-    </div>
   </main>
 
-  <footer style="background-color: #007BFF; color: white; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem;">
-    <p>© 2025 XpertAuth Association</p>
+  <!-- Footer - OPTIMIZADO -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>XpertAuth Association</h3>
+        <p class="slogan">"Tú te ocupas de lo importante, clientes y flota, nosotros de la burocracia"</p>
+        
+        <!-- INFORMACIÓN DE CONTACTO OPTIMIZADA -->
+        <div style="margin: 1rem 0;">
+          <p style="margin: 0.5rem 0;"><strong>📍 Oficina en L'Escala (Girona)</strong></p>
+          <p style="margin: 0.3rem 0; color: #666;">Carrer de la Riera, 56 – 17130 L'Escala, Girona</p>
+          <p style="margin: 0.3rem 0;"><strong>📞 Teléfono:</strong> <a href="tel:+34666666666" style="color: #ff6600;">+34 666 66 66 66</a></p>
+          <p style="margin: 0.3rem 0;"><strong>📧 Email:</strong> <a href="mailto:info@xpertauth.com" style="color: #ff6600;">info@xpertauth.com</a></p>
+        </div>
+        
+        <!-- HORARIOS -->
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; font-size: 0.9rem; color: #333;">
+  <strong>🕒 Horario de Atención:</strong><br>
+  Lunes a Viernes: 9:00 - 14:00<br>
+  <span style="color: #28a745;">✅ Consultoría inicial siempre gratuita</span>
+</div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Información Legal</h4>
+        <ul>
+          <li><a href="../../legales/aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="../../legales/politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="../../legales/politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+        
+        <!-- SERVICIOS RÁPIDOS -->
+        <h4 style="margin-top: 2rem;">Servicios Principales</h4>
+        <ul>
+          <li><a href="consultoria.html">Consultoría Gratuita</a></li>
+          <li><a href="permisos.html">Tramitación Permisos</a></li>
+          <li><a href="formacion.html">Formación IA</a></li>
+          <li><a href="acompanamientos.html">Acompañamientos</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <a href="../../contacto.html" class="btn-footer" style="background: #ff6600; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; display: inline-block; margin-bottom: 1rem; font-weight: bold;">
+          💬 Contactar Ahora
+        </a>
+        
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/xpertauth-association/about/" target="_blank" aria-label="LinkedIn XpertAuth - Red profesional transporte especial">
+            <img src="../../images/social/linkedin.png" alt="LinkedIn XpertAuth" class="social-icon">
+          </a>
+          <a href="https://xpertauthblog.wordpress.com" target="_blank" aria-label="Blog XpertAuth - Noticias transporte especial">
+            <img src="../../images/social/blog-icon.png" alt="Blog XpertAuth" class="social-icon">
+          </a>
+        </div>
+        
+        <!-- CALL TO ACTION FINAL -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+          <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">
+            🚀 ¿Listo para simplificar tus trámites?
+          </p>
+          <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem;">
+            Consultoría gratuita • Sin compromiso
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 XpertAuth Association — Especialistas en Transporte Especial Catalunya</p>
+      <p><em>Proyecto en desarrollo activo. Asociación sin ánimo de lucro en proceso de constitución legal.</em></p>
+      
+    </div>
   </footer>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #f9fbfd; color: #333; padding: 1rem; border-top: 1px solid #ccc; text-align: center; z-index: 9999; display: none; box-shadow: 0 -2px 10px rgba(0,0,0,0.1);">
+    🍪 Utilizamos cookies para mejorar tu experiencia de navegación. Al continuar, aceptas nuestra 
+    <a href="../../legales/politica-cookies.html" target="_blank" style="color: #ff6600; text-decoration: underline;">Política de Cookies</a>.
+    <button id="accept-cookies" style="margin-left: 1rem; background-color: #ff6600; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: bold;">
+      ✅ Aceptar Cookies
+    </button>
+  </div>
+
+  <!-- JSON-LD Schema adicional para servicios -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "XpertAuth Association",
+    "description": "Especialistas en tramitación de permisos y autorizaciones para transporte especial en Catalunya",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de la Riera, 56",
+      "addressLocality": "L'Escala",
+      "addressRegion": "Girona",
+      "postalCode": "17130",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "42.1247",
+      "longitude": "3.1336"
+    },
+    "telephone": "+34 666 66 66 66",
+    "email": "info@xpertauth.com",
+    "url": "https://xpertauth.com",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "€€",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.1247",
+        "longitude": "3.1336"
+      },
+      "geoRadius": "500000"
+    },
+    "serviceType": [
+      "Transporte Especial",
+      "Permisos DGT",
+      "Gestorías",
+      "Consultoría IA"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Transporte Especial",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Consultoría Gratuita",
+            "description": "Asesoramiento gratuito sobre permisos de transporte especial"
+          },
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tramitación de Permisos",
+            "description": "Gestión completa de permisos ante DGT y SCT"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Formación en IA",
+            "description": "Formación especializada en inteligencia artificial aplicada al transporte"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script>
+    // Banner de cookies mejorado
+    window.addEventListener('load', function () {
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const accepted = localStorage.getItem('cookiesAccepted');
+      
+      if (!accepted) {
+        setTimeout(() => {
+          banner.style.display = 'block';
+          banner.style.animation = 'slideUp 0.5s ease-out';
+        }, 2000); // Mostrar después de 2 segundos
+      }
+      
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.style.animation = 'slideDown 0.5s ease-in';
+        setTimeout(() => {
+          banner.style.display = 'none';
+        }, 500);
+      });
+    });
+  </script>
+
+  <style>
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    @keyframes slideDown {
+      from { transform: translateY(0); }
+      to { transform: translateY(100%); }
+    }
+    
+    /* Mejoras CSS adicionales para herramientas */
+    .herramienta-item {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .herramienta-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .herramienta-item img {
+      max-width: 80px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    
+    .herramienta-item p {
+      font-size: 0.8rem;
+      color: #666;
+      margin: 0;
+    }
+    
+    /* Mejoras para estamentos */
+    .estamento-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 0.5rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .estamento-logo:hover .estamento-info {
+      transform: translateY(0);
+    }
+    
+    .estamento-info h4 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .estamento-info p {
+      margin: 0;
+      font-size: 0.7rem;
+      opacity: 0.8;
+    }
+  </style>
+
 </body>
 </html>
