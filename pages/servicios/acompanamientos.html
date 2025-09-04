@@ -333,32 +333,7 @@
       "priceCurrency": "EUR"
     }
   }
-  </script>
-
-  <!-- Scripts -->
-  <script>
-    // Banner de cookies
-    window.addEventListener('load', function () {
-      const banner = document.getElementById('cookie-banner');
-      const acceptBtn = document.getElementById('accept-cookies');
-      const accepted = localStorage.getItem('cookiesAccepted');
-      
-      if (!accepted) {
-        setTimeout(() => {
-          banner.style.display = 'block';
-          banner.style.animation = 'slideUp 0.5s ease-out';
-        }, 2000);
-      }
-      
-      acceptBtn.addEventListener('click', function () {
-        localStorage.setItem('cookiesAccepted', 'true');
-        banner.style.animation = 'slideDown 0.5s ease-in';
-        setTimeout(() => {
-          banner.style.display = 'none';
-        }, 500);
-      });
-    });
-  </script>
+  
 
   <style>
     /* Estilos específicos para páginas de servicios */
